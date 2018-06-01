@@ -11,30 +11,30 @@ var firstNumber = 1
 var lastNumber = 5
 
 func addSpacesToNumber(n: Int) -> String {
-	if n < 10 {
-		return "   \(n)  "
-	}
-	if n < 100 {
-		return "  \(n)  "
-	}
-	return "  \(n) "
+    if n < 10 {
+        return "   \(n)  "
+    }
+    if n < 100 {
+        return "  \(n)  "
+    }
+    return "  \(n) "
 }
 
 func separatorLine(size: Int) -> String{
-	return String(repeating: "-", count: size)
+    return String(repeating: "-", count: size)
 } 
 
 func formatHeader(header: String, separatorSize: Int) -> String {
-	let separator = separatorLine(size: separatorSize)
-	return "\(separator)\n\(header)\n\(separator)"
+    let separator = separatorLine(size: separatorSize)
+    return "\(separator)\n\(header)\n\(separator)"
 }
 
 func printMultiplicationTable(startsWith: Int, endsWith: Int) {
     var header = "|   x  |"
-
+    
     for number in (startsWith...endsWith) {
         var row = "|\(addSpacesToNumber(n: number))|"
-
+        
         for by in (startsWith...endsWith) {
             if number == startsWith {
                 let str = addSpacesToNumber(n: by)
