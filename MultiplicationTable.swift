@@ -8,7 +8,7 @@
 import Foundation
 
 var firstNumber = 1
-var lastNumber = 5
+var lastNumber = 12
 
 func addSpacesToNumber(n: Int) -> String {
 	if n < 10 {
